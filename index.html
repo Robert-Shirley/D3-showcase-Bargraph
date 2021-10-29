@@ -1,68 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
 
     <title>Finance</title>
     <style>
-        h2,p{
-            margin: 10px 0;
-        }
-        header {
-            margin-bottom: 40px;
-        }
-        .tip{
-            padding: 10px;
-            background: #333;
-            color: rgb(255, 255, 255);
-        }
-        .tip .delete{
-            color: hotpink;
-            font-size: 0.8em;
-        }
+      h2,
+      p {
+        margin: 10px 0;
+      }
+      header {
+        margin-bottom: 40px;
+      }
+      .tip {
+        padding: 10px;
+        background: #333;
+        color: rgb(255, 255, 255);
+      }
+      .tip .delete {
+        color: hotpink;
+        font-size: 0.8em;
+      }
     </style>
-</head>
-<body class="blue lighten-3">
-
+  </head>
+  <body class="blue lighten-3">
     <header class="indigo lighten-0.5 section">
-        <h2 class="center white-text">Rob's finance</h2>
-        <p class="flow-text grey-text center text-lighten-2">Monthly Money Tracker</p>
+      <h2 class="center white-text">Rob's finance</h2>
+      <p class="flow-text grey-text center text-lighten-2">
+        Monthly Money Tracker
+      </p>
     </header>
 
     <div class="container section">
-        <div class="row">
-            <div class="col s12 m6">
-                <form class="card z-depth-0.5" autocomplete="off" >
-                  <div class="card-content">
-                    <span class="card-title indigo-text">Add Item:</span>
-                    <div class="input-field">
-                        <input type="text" id="name">
-                        <label for="name">Item Name</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="number" id="cost">
-                        <label for="cost">Item Cost ($)</label>
-                    </div>
-                    <div class="input-field center">
-                        <button class="btn-large pink white-text">Add Item</button>
-                    </div>
-                    <div class="input-field center">
-                       <p class="red-text" id="error"></p>
-                    </div>
-
-
-                  </div>
-                </form>
+      <div class="row">
+        <div class="col s12 m6">
+          <form class="card z-depth-0.5" autocomplete="off">
+            <div class="card-content">
+              <span class="card-title indigo-text">Add Item:</span>
+              <div class="input-field">
+                <input type="text" id="name" />
+                <label for="name">Item Name</label>
+              </div>
+              <div class="input-field">
+                <input type="number" id="cost" />
+                <label for="cost">Item Cost ($)</label>
+              </div>
+              <div class="input-field center">
+                <button class="btn-large pink white-text">Add Item</button>
+              </div>
+              <div class="input-field center">
+                <p class="red-text" id="error"></p>
+              </div>
             </div>
-            <div class="col s12 m5 push-m1">
-                <div class="canvas"></div>
-            </div>
+          </form>
         </div>
+        <div class="col s12 m5 push-m1">
+          <div class="canvas"></div>
+        </div>
+      </div>
     </div>
     <script src="firebaseconfig.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -71,5 +74,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
     <script src="index.js"></script>
     <script src="graph.js"></script>
-</body>
+  </body>
 </html>
